@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5BSPJSJ');</script>
-<!-- End Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5BSPJSJ");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,9 +28,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BSPJSJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5BSPJSJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation bar -->
     <nav class="nav-container flex center">
       <div class="flex spacebetween container">
@@ -91,6 +104,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 placeholder="Phone Number"
                 required
               />
+              <p id="mobileError" class="whiteparah small mb20">
+                Please enter a valid 10 digit mobile number
+              </p>
               <div class="flex justifyend">
                 <input type="submit" class="bluebutton" placeholder="Submit" />
               </div>
@@ -116,20 +132,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       class="Brands-logo"
                       src="/zoho-crm/yas-asset-management-logo-1 1.png"
                     />
-                    <img class="Brands-logo" src="/zoho-crm/download-1-1 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/zO-WMWI2_400x400 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/download-2-1 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/download-3-1 1.png" />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-1-1 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/zO-WMWI2_400x400 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-2-1 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-3-1 1.png"
+                    />
                   </div>
                   <div class="flex center-967 marque-subcont">
                     <img
                       class="Brands-logo"
                       src="/zoho-crm/yas-asset-management-logo-1 1.png"
                     />
-                    <img class="Brands-logo" src="/zoho-crm/download-1-1 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/zO-WMWI2_400x400 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/download-2-1 1.png" />
-                    <img class="Brands-logo" src="/zoho-crm/download-3-1 1.png" />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-1-1 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/zO-WMWI2_400x400 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-2-1 1.png"
+                    />
+                    <img
+                      class="Brands-logo"
+                      src="/zoho-crm/download-3-1 1.png"
+                    />
                   </div>
                 </div>
               </div>
@@ -211,10 +251,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ></div>
     <div class="center flex p60v key-benefits-container">
       <div class="container">
-        <h2 class="blueheadingbig whiteparah" style="color: white">
-          Why Zoho CRM!
-        </h2>
-        <div class="flex overflow-scroll slider">
+        <div class="key-benefits-heading-container">
+          <h2 class="blueheadingbig whiteparah" style="color: white">
+            Why Zoho CRM!
+          </h2>
+          <div style="margin-top: 12px">
+            <button class="key-benefits-button first-key-button">
+              <img
+                src="./zoho-crm/Arrow_button.png"
+                onclick="moveSliderToRight()"
+                alt=""
+              />
+            </button>
+            <button class="key-benefits-button" onclick="moveSliderToLeft()">
+              <img src="./zoho-crm/Arrow_button.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="flex overflow-scroll slider" id="sliderCont">
           <div class="slide flex">
             <img src="/zoho-crm/slider1.png" alt="" class="Benefits-img" />
             <p class="normal">
@@ -240,10 +294,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Slider -->
     <div class="center flex p60v">
       <div class="container">
-        <h2 class="blueheadingbig">
-          Other Value Services of Supertron Infotech
-        </h2>
-        <div class="flex overflow-scroll slider">
+        <div class="key-benefits-heading-container">
+          <h2 class="blueheadingbig">
+            Other Value Services of Supertron Infotech
+          </h2>
+          <div style="margin-top: 12px">
+            <button class="key-benefits-button first-key-button">
+              <img
+                src="./zoho-crm/Arrow_button.png"
+                onclick="moveSliderToRight2()"
+                alt=""
+              />
+            </button>
+            <button class="key-benefits-button" onclick="moveSliderToLeft2()">
+              <img src="./zoho-crm/Arrow_button.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="flex overflow-scroll slider" id="sliderCont2">
           <div class="slide2">
             <h3 class="whiteheadingnormal mb20" style="color: white">
               Legacy modernization with Zoho Creator

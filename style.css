@@ -79,7 +79,26 @@ body {
     filter: drop-shadow(0px 4px 49px rgba(0, 0, 0, 0.15));
 }
 
+.key-benefits-heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.key-benefits-button {
+    background-color: transparent;
+    border: none;
+}
+
+.first-key-button {
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+
 #thankYou {
+    display: none;
+}
+
+#mobileError {
     display: none;
 }
 
@@ -729,6 +748,12 @@ body {
         margin-right: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    .key-benefits-heading-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
