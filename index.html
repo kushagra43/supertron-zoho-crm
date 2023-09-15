@@ -401,10 +401,19 @@
     <script src="/zoho-crm/script.js"></script>
     <script>
       function topFunction() {
+        // Get the element with id "myForm"
         var myForm = document.getElementById("myForm");
 
+        // Check if the element exists
         if (myForm) {
-          myForm.scrollIntoView({ behavior: "smooth" });
+          // Calculate the target position as 80 pixels above the element
+          var targetPosition = myForm.offsetTop - 100;
+
+          // Scroll to the target position with smooth behavior
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
         }
       }
     </script>
