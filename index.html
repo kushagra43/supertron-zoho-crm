@@ -401,8 +401,11 @@
     <script src="/zoho-crm/script.js"></script>
     <script>
       function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        var myForm = document.getElementById("myForm");
+
+        if (myForm) {
+          myForm.scrollIntoView({ behavior: "smooth" });
+        }
       }
     </script>
   </body>
