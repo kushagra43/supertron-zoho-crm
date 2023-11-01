@@ -5,7 +5,6 @@ document.querySelector("#myForm").addEventListener("submit", function (e) {
   let formData = new FormData(this);
 
   const number = formData.get("mobilephone");
-  console.log(number);
 
   var expr = /^(0|91)?[6-9][0-9]{9}$/;
   if (!expr.test(number)) {
@@ -57,35 +56,69 @@ document.querySelector("#myForm").addEventListener("submit", function (e) {
 // Slider Movements
 const moveSliderToLeft = () => {
   const scrollableElement = document.querySelector("#sliderCont");
-  scrollableElement.scrollBy({
-    left: 400,
-    behavior: "smooth",
-  });
-};
+  const screenWidth = window.innerWidth;
 
-const moveSliderToRight = () => {
-  const scrollableElement = document.querySelector("#sliderCont");
-  scrollableElement.scrollBy({
-    left: -400,
-    behavior: "smooth",
-  });
-};
-
-
-// Slider2 Movements
-const moveSliderToLeft2 = () => {
-    const scrollableElement = document.querySelector("#sliderCont2");
+  if (screenWidth < 500) {
+    scrollableElement.scrollBy({
+      left: 200,
+      behavior: "smooth",
+    });
+  } else {
     scrollableElement.scrollBy({
       left: 400,
       behavior: "smooth",
     });
-  };
-  
-  const moveSliderToRight2 = () => {
-    const scrollableElement = document.querySelector("#sliderCont2");
+  }
+};
+
+const moveSliderToRight = () => {
+  const scrollableElement = document.querySelector("#sliderCont");
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 500) {
+    scrollableElement.scrollBy({
+      left: -200,
+      behavior: "smooth",
+    });
+  } else {
     scrollableElement.scrollBy({
       left: -400,
       behavior: "smooth",
     });
-  };
-  
+  }
+};
+
+// Slider2 Movements
+const moveSliderToLeft2 = () => {
+  const scrollableElement = document.querySelector("#sliderCont2");
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 500) {
+    scrollableElement.scrollBy({
+      left: 280,
+      behavior: "smooth",
+    });
+  } else {
+    scrollableElement.scrollBy({
+      left: 400,
+      behavior: "smooth",
+    });
+  }
+};
+
+const moveSliderToRight2 = () => {
+  const scrollableElement = document.querySelector("#sliderCont2");
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 500) {
+    scrollableElement.scrollBy({
+      left: -280,
+      behavior: "smooth",
+    });
+  } else {
+    scrollableElement.scrollBy({
+      left: -400,
+      behavior: "smooth",
+    });
+  }
+};
